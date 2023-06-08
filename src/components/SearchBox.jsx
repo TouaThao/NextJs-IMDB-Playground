@@ -15,6 +15,12 @@ export default function SearchBox() {
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
   };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      handleSubmit(event);
+    }
+  };
   return (
     <form
       onSubmit={handleSubmit}
@@ -23,6 +29,7 @@ export default function SearchBox() {
       <input
         value={search}
         onChange={handleSearchChange}
+        onKeyDown={handleKeyDown}
         type="text"
         placeholder="Search keywords"
         className="w-full h-14 rounded-sm placeholder-gray-500 outline-none bg-transparent flex-1"

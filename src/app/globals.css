@@ -10,3 +10,11 @@ html::-webkit-scrollbar{
 html{
     scrollbar-width: none;
 }
+
+:root {
+    --text-size: 16px;
+  }
+  
+  * {
+    font-size: var(--text-size);
+  }
